@@ -1,8 +1,6 @@
 json = []
 
-index = 0
-while index < @contacts.length
-  contact = @contacts[index]
+@contacts.each do |contact|
   json << {
     id: contact.id,
     first_name: contact.first_name,
@@ -10,7 +8,6 @@ while index < @contacts.length
     email: contact.email,
     phone_number: contact.phone_number,
   }
-  index += 1
 end
 
 return json
