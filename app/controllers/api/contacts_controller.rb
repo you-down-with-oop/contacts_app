@@ -3,4 +3,9 @@ class Api::ContactsController < ApplicationController
     @contact = Contact.first
     render "one_contact.json.jb"
   end
+
+  def all_contacts_method
+    @contacts = Contact.all
+    render "all_contacts.json.jb"
+  end
 end

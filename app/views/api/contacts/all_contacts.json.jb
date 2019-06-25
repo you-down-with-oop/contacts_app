@@ -1,0 +1,16 @@
+json = []
+
+index = 0
+while index < @contacts.length
+  contact = @contacts[index]
+  json << {
+    id: contact.id,
+    first_name: contact.first_name,
+    last_name: contact.last_name,
+    email: contact.email,
+    phone_number: contact.phone_number,
+  }
+  index += 1
+end
+
+return json
