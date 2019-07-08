@@ -19,6 +19,7 @@ class Api::ContactsController < ApplicationController
       email: params[:email],
       phone_number: params[:phone_number],
       bio: params[:bio],
+      user_id: current_user.id,
     )
     if @contact.save
       render "show.json.jb"
